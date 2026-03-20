@@ -14,6 +14,8 @@ public class Main {
 
         Produto produto = new Produto();
         produto.setNome("Eduardo feio");
+        produto.getNome();
+        
 
     }
 }
