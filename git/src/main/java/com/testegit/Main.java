@@ -2,6 +2,7 @@ package com.testegit;
 
 import java.util.Scanner;
 
+import com.testegit.produtos.Cadastro;
 import com.testegit.produtos.Produto;
 
 import service.CadastroService;
@@ -9,7 +10,7 @@ import service.CadastroService;
 public class Main {
     public static void main(String[] args) {
 
-        CadastroService cadastroService = new CadastroService();
+        Cadastro cadastroService = new CadastroService();
 
         while (true) {
             Scanner scan = new Scanner(System.in);
