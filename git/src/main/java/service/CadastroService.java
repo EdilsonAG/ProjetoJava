@@ -5,12 +5,20 @@ import java.util.List;
 
 import com.testegit.produtos.Cadastro;
 import com.testegit.produtos.Produto;
+import com.testegit.repositorio.SalvarLocal;
 
 public class CadastroService implements Cadastro{
     
-    List<Produto> produtos = new ArrayList<>();
+    private SalvarLocal salvarLocal = new SalvarLocal();
+    public CadastroService(SalvarLocal salvarLocal){
+        this.salvarLocal = salvarLocal;
+    }
 
+    public CadastroService(){
+       
+    }
+ 
     public void salvarCadastro(Produto spjf){
-        produtos.add(spjf);
+        salvarLocal.salvar(spjf);
     }
 }
