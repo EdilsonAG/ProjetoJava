@@ -4,29 +4,41 @@ import java.util.Scanner;
 
 import com.testegit.produtos.Produto;
 
+import service.CadastroService;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
 
-        System.out.println("digite sua idade");
-        int idadeADOJIFSZD = scan.nextInt();
-        System.out.println("Você e essa idade exatamente acredita = " + idade);
+        CadastroService cadastroService = new CadastroService();
 
-        Produto produto = new Produto();
-        produto.setNome("Eduardo feio");
-        produto.getNome();
-        
-        System.out.println("teste");
-        System.out.println("teste");
-        System.out.println("teste");
-        System.out.println("teste");
-        System.out.println("teste");
-        System.out.println("teste");
-        System.out.println("teste");
-        System.out.println("teste");
+        while (true) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("1 é cadastrar produto");
+            int i = scan.nextInt();
 
-        Atualizado 
+            switch (i) {
+                case 1:
+                    Produto produto = new Produto();
+                    Scanner produtoScan = new Scanner(System.in);
 
+                    System.out.println("nome produto");
+                    String nome = produtoScan.nextLine();
+
+                    produto.setNome(nome);
+                    cadastroService.salvarCadastro(produto);
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+
+                default:
+                    scan.close();
+                    break;
+            }
+        }
 
     }
 }
